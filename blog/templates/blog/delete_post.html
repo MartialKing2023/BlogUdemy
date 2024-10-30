@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Supprimer un article{% endblock %}
+
+{% block content %}
+
+    <p><a href="{% url 'blog-index' %}">Retour au sommaire</a></p>
+
+    <h2>Alerte!!! Suppression de l'article!!!</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        <p>Voulez-vous supprimer "{{ post.title }}"?</p>
+        <input type="submit" value="Supprimer">
+    </form>
+
+{% endblock %}

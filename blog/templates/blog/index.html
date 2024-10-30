@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block title %} Le blog {% endblock %}
+
+{% block content %}
+    <a href="{% url 'blog-create' %}">Ajouter un article</a>
+
+    {% for post in posts %}
+        <a href="{% url 'blog-details' slug=post.slug %}" style="text-decoration: none;">
+            <h2>{{ forloop.counter }})- {{ post.title|safe }}</h2>
+        </a>
+        <p>{{ post.content|truncatewords:10|striptags|safe }}</p>
+    {% endfor %}
+
+{% endblock %}

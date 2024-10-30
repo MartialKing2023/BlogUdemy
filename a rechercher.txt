@@ -1,0 +1,16 @@
+1) fonction "lambda"
+2) la fonction "split" (len(self.content.split()))
+3) les variables de boucles. Ex: forloop pour la boucle 'for'
+4) La balise de gabarit {% with %}{% endwith %}
+5) Les filtres utilises en Django Ex: truncatewords, striptags
+6) Echappement HTML automatique (la balise {% autoescape off/on %}{% endautoescape %})
+7) Les Widgets pour les formulaires
+8) Regarder dans la documentation "les vues basees sur les classes"(CBV)
+9) Surcharge d'une methode en python/django
+
+
+Notes: 
+1) Regarder des tutos sur "docstring"
+2) Le site de référence pour les CBV : http://ccbv.co.uk/
+3) CRUD: Create Retrieve Update Delete
+

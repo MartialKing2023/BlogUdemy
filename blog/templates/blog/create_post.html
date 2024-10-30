@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Creer un article{% endblock %}
+
+{% block content %}
+
+    <a href="{% url 'blog-index' %}">Retour au sommaire</a>
+
+    <h2>{{ titleText }}</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="{{ submitText }}">
+    </form>
+
+
+{% endblock %}

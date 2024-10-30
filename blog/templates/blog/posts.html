@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    <p><a href="{% url 'blog-index' %}">Retour au sommaire</a></p>
+    <p><a href="{% url 'blog-edit' slug=post.slug %}">Modifier l'article</a></p>
+    <p><a href="{% url 'blog-delete' slug=post.slug %}">Supprimer l'article</a></p>
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.content }}</p>
+    <br>
+{% endblock %}

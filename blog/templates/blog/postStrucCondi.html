@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le blog</title>
+</head>
+<body>
+    {% if posts %}
+        <h1>Le blog contient {{ posts.count }} articles</h1>
+    {% else %}
+        <h1>Ce blog ne contient aucun article</h1>
+    {% endif %}
+</body>
+</html>
